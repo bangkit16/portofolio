@@ -4,6 +4,11 @@
 import { useState } from "react";
 // import reactLogo from './assets/react.svg'
 import portoIMG from "/img/portoimg.png";
+import inventaris from "/img/inventaris.png";
+import maut from "/img/maut.png";
+import portofolio from "/img/portofolio.png";
+import POS from "/img/POS.png";
+import sijeo from "/img/sijeo.png";
 import TypingEffect from 'react-typing-effect';
 import linkedin from "/svg/linkedin.svg";
 
@@ -647,7 +652,7 @@ function Project() {
  const pro = [
   {
    nama: "Sistem Pendukung Keputusan MAUT",
-   gambar: "/img/maut.png",
+   gambar: maut,
    tool: "CodeIgniter4 , Bootstrap 5",
    deskripsi:
     "Sebuah web sederhana yang dikembangkan untuk membantu pengambilan keputusan menggunakan metode Multi-Attribute Utility Theory (MAUT). Web ini untuk membantu pengambilan keputusan dengan mengelola kriteria dan alternatif secara efisien.",
@@ -655,7 +660,7 @@ function Project() {
   },
   {
    nama: "Sistem Informasi Jasa Event Organizer (SIJEO) ",
-   gambar: "/img/sijeo.png",
+   gambar: sijeo,
    tool: "CodeIgniter4 , Bootstrap 5",
    deskripsi:
     "Aplikasi untuk mengelola acara, pendaftaran, pembayaran, manajemen klien, dan vendor, serta menyediakan pelaporan dan notifikasi untuk mempermudah perencanaan dan pencarian vendor vendor yang ada.",
@@ -663,7 +668,7 @@ function Project() {
   },
   {
    nama: "Sistem Informasi Inventaris Perkakas JTI",
-   gambar: "/img/inventaris.png",
+   gambar: inventaris,
    tool: "Laravel 10 , Bootstrap 5",
    deskripsi:
     "Sebuah aplikasi web untuk mengelola dan melacak inventaris barang jurusan Teknologi Informasi Politeknik Negeri Malang secara efisien dan terorganisir.",
@@ -671,7 +676,7 @@ function Project() {
   },
   {
    nama: "Personal Web Portofolio",
-   gambar: "/img/portofolio.png",
+   gambar: portofolio,
    tool: "ReactJs , Tailwind",
    deskripsi:
     "Portofolio web pribadi yang digunankan menampilkan karya, proyek, keterampilan, dan pengalaman saya, digunakan untuk menunjukkan kemampuan dan pencapaian kepada calon klien atau pemberi kerja.",
@@ -679,7 +684,7 @@ function Project() {
   },
   {
    nama: "Sistem Informasi Point Of Sales",
-   gambar: "/img/POS.png",
+   gambar: POS,
    tool: "Laravel 10 , Bootstrap 5",
    deskripsi:
     "Sistem Informasi Point of Sales (POS) ini menyediakan dashboard intuitif dan grafik informatif untuk memantau penjualan real-time, mengelola produk, dan menganalisis tren penjualan.",

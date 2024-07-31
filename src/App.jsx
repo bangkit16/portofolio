@@ -114,7 +114,7 @@ function Hero() {
         text={['Fullstack Engineer', 'Web Developer' , 'Backend Engineer']}
         speed={100}
         eraseSpeed={50}
-        eraseDelay={2000}
+        eraseDelay={1000}
         typingDelay={500}
       />
        <p className="text-base lg:text-xl mt-5">
@@ -675,7 +675,7 @@ function Project() {
    tool: "ReactJs , Tailwind",
    deskripsi:
     "Portofolio web pribadi yang digunankan menampilkan karya, proyek, keterampilan, dan pengalaman saya, digunakan untuk menunjukkan kemampuan dan pencapaian kepada calon klien atau pemberi kerja.",
-   link: "https://github.com/bangkit16/Inventaris",
+   link: "https://github.com/bangkit16/portofolio",
   },
   {
    nama: "Sistem Informasi Point Of Sales",

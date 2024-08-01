@@ -192,7 +192,7 @@ function About() {
        </p>
        <div className="mt-5">
         <a
-         href="https://drive.google.com/file/d/1-nlvIDgTJkJsrLMSW5b6aZfIGMQI1qq1/view?usp=sharing"
+         href="https://drive.google.com/file/d/102EP9GNNCu6-QPq6eLo8KKUGLkdD90_I/view?usp=sharing"
          target="blank"
          className="rounded-xl lg:text-xl  bg-green-500 text-white font-semibold py-2 px-4 text-base hover:bg-white border-2 border-green-500 hover:text-green-500 transition"
         >

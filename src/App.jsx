@@ -9,7 +9,7 @@ import maut from "/img/maut.png";
 import portofolio from "/img/portofolio.png";
 import POS from "/img/POS.png";
 import sijeo from "/img/sijeo.png";
-import TypingEffect from 'react-typing-effect';
+import TypingEffect from "react-typing-effect";
 import linkedin from "/svg/linkedin.svg";
 
 // import { Carousel } from "@material-tailwind/react";
@@ -114,14 +114,14 @@ function Hero() {
         Fullstack <span className="text-green-500">Developer</span>
        </h3> */}
        <TypingEffect
-       className=" lg:text-3xl text-2xl font-bold mb-1  text-slate-900
+        className=" lg:text-3xl text-2xl font-bold mb-1  text-slate-900
               "
-        text={['Fullstack Engineer', 'Web Developer' , 'Backend Engineer']}
+        text={["Fullstack Engineer", "Web Developer", "Backend Engineer"]}
         speed={100}
         eraseSpeed={50}
         eraseDelay={1000}
         typingDelay={500}
-      />
+       />
        <p className="text-base lg:text-xl mt-5">
         Berpengalaman dalam pengembangan aplikasi khususnya di bidang Pengembangan Website sebagai{" "}
         <span className="font-bold">Fullstack Developer</span> dan <span className="font-bold">Backend Developer</span>.{" "}
@@ -196,14 +196,14 @@ function About() {
          target="blank"
          className="rounded-xl lg:text-xl  bg-green-500 text-white font-semibold py-2 px-4 text-base hover:bg-white border-2 border-green-500 hover:text-green-500 transition"
         >
-         Lihat Resume CV ➡️
+         Lihat Resume CV
         </a>
         <a
          href="https://drive.google.com/file/d/1yJgfciJ8T-2klxJAKGWa2fgclm4geGW4/view?usp=sharing"
          target="blank"
          className="rounded-xl lg:text-xl  bg-green-500 text-white font-semibold py-2 px-4 text-base hover:bg-white border-2 border-green-500 hover:text-green-500 transition ml-4"
         >
-         Lihat Serifikat ➡️
+         Lihat Serifikat
         </a>
        </div>
       </div>
@@ -649,6 +649,27 @@ function Project() {
    </>
   );
  }
+ const Modal = () => {
+  return (
+   <>
+    <div
+     id="modal"
+     className="fixed  inset-0 z-[10000] px-2 flex items-center justify-center bg-gray-800 bg-opacity-75"
+    >
+     <div className="bg-white p-5 rounded shadow-lg max-w-6xl w-full">
+      <div className="container ">
+       <button id="closeModal" className="bg-red-500 w-fit text-end mr-auto text-white p-2 rounded">
+        Close
+       </button>
+      </div>
+      {/* <h2 className="text-xl font-bold mb-4">This is a Modal</h2> */}
+      {/* <p className="mb-4">This is the modal content.</p> */}
+     </div>
+    </div>
+   </>
+  );
+ };
+
  const pro = [
   {
    nama: "Sistem Pendukung Keputusan MAUT",
@@ -707,6 +728,7 @@ function Project() {
        Berikut adalah beberapa proyek yang menunjukkan kemampuan saya dalam mengembangkan aplikasi web yang efektif dan
        inovatif.
       </p>
+      {/* <Modal /> */}
       <div className="flex flex-wrap transition">
        {pro.slice(0, visibleCount).map((item, index) => (
         <Porto

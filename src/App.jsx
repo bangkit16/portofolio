@@ -241,7 +241,7 @@ function About() {
                   target="blank"
                   className="rounded-xl lg:text-xl  bg-green-500 text-white font-semibold py-2 px-4 text-base hover:bg-white border-2 border-green-500 hover:text-green-500 transition ml-4"
                 >
-                  Lihat Serifikat
+                  Lihat Sertifikat
                 </a>
               </div>
             </div>

@@ -230,14 +230,14 @@ function About() {
               </p>
               <div className="mt-5">
                 <a
-                  href="https://drive.google.com/file/d/102EP9GNNCu6-QPq6eLo8KKUGLkdD90_I/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1C1wY1PwMRufZSOsf4T1x3ByH5o2qtw0U/view?usp=sharing"
                   target="blank"
                   className="rounded-xl lg:text-xl  bg-green-500 text-white font-semibold py-2 px-4 text-base hover:bg-white border-2 border-green-500 hover:text-green-500 transition"
                 >
                   Lihat Resume CV
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/1yJgfciJ8T-2klxJAKGWa2fgclm4geGW4/view?usp=sharing"
+                  href="https://drive.google.com/drive/folders/1qBZJ9uVAb2i_-UPJPDi5o2hGbaKY34wS?usp=sharing"
                   target="blank"
                   className="rounded-xl lg:text-xl  bg-green-500 text-white font-semibold py-2 px-4 text-base hover:bg-white border-2 border-green-500 hover:text-green-500 transition ml-4"
                 >
@@ -727,13 +727,13 @@ function Project() {
               {tool}
             </span>
             <p className="text-base  h-auto text-slate-600 pr-3">{deskripsi}</p>
-            {/* <a
+            <a
               href={link}
               target="blank"
               className="border-green-500 border-[3px] w-fit justify-self-end  text-green-500 font-semibold bottom-0 mb-0 lg:mt-auto mt-2  rounded-full px-5 py-2"
             >
-              Code {'</> '}
-            </a> */}
+              Visit {'</> '}
+            </a>
           </div>
         </div>
       </>
@@ -810,7 +810,7 @@ function Project() {
       tool: 'Laravel 10 , Bootstrap 5',
       deskripsi:
         'Digitalisasi HSSE untuk Keselamatan yang Lebih Cerdas dan Efisien',
-      link: 'https://github.com/bangkit16/PWL_2024',
+      link: 'https://save-guard.com/',
     },
     {
       nama: 'SQL Adventure : Journey to Database Mastery',
@@ -818,7 +818,7 @@ function Project() {
       tool: 'Laravel 10 , Bootstrap 5',
       deskripsi:
         'SQL Adventure adalah platform pembelajaran SQL interaktif berbasis storytelling yang memungkinkan pengguna belajar dan mempraktikkan query SQL melalui tantangan dan latihan langsung. ',
-      link: 'https://github.com/bangkit16/PWL_2024',
+      link: 'https://sqla.gerbangbelajar.id/',
     },
   ]
   const [visibleCount, setVisibleCount] = useState(3)

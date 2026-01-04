@@ -11,63 +11,63 @@ import sqla from '/img/sqla.png'
 
 function Project() {
   const pro = [
-    {
-      nama: 'Sistem Pendukung Keputusan MAUT',
-      gambar: maut,
-      tool: 'CodeIgniter4 , Bootstrap 5',
-      deskripsi:
-        'Sebuah web sederhana yang dikembangkan untuk membantu pengambilan keputusan menggunakan metode Multi-Attribute Utility Theory (MAUT). Web ini untuk membantu pengambilan keputusan dengan mengelola kriteria dan alternatif secara efisien.',
-      link: 'https://github.com/bangkit16/SPKMAUT',
-    },
-    {
-      nama: 'Sistem Informasi Jasa Event Organizer (SIJEO) ',
-      gambar: sijeo,
-      tool: 'CodeIgniter4 , Bootstrap 5',
-      deskripsi:
-        'Aplikasi untuk mengelola acara, pendaftaran, pembayaran, manajemen klien, dan vendor, serta menyediakan pelaporan dan notifikasi untuk mempermudah perencanaan dan pencarian vendor vendor yang ada.',
-      link: 'https://github.com/bangkit16/sijeo-mp',
-    },
-    {
-      nama: 'Sistem Informasi Inventaris Perkakas JTI',
-      gambar: inventaris,
-      tool: 'Laravel 10 , Bootstrap 5',
-      deskripsi:
-        'Sebuah aplikasi web untuk mengelola dan melacak inventaris barang jurusan Teknologi Informasi Politeknik Negeri Malang secara efisien dan terorganisir.',
-      link: 'https://github.com/bangkit16/Inventaris',
-    },
-    {
-      nama: 'Personal Web Portofolio',
-      gambar: portofolio,
-      tool: 'ReactJs , Tailwind',
-      deskripsi:
-        'Portofolio web pribadi yang digunankan menampilkan karya, proyek, keterampilan, dan pengalaman saya, digunakan untuk menunjukkan kemampuan dan pencapaian kepada calon klien atau pemberi kerja.',
-      link: 'https://github.com/bangkit16/portofolio',
-    },
-    {
-      nama: 'Sistem Informasi Point Of Sales',
-      gambar: POS,
-      tool: 'Laravel 10 , Bootstrap 5',
-      deskripsi:
-        'Sistem Informasi Point of Sales (POS) ini menyediakan dashboard intuitif dan grafik informatif untuk memantau penjualan real-time, mengelola produk, dan menganalisis tren penjualan.',
-      link: 'https://github.com/bangkit16/PWL_2024',
-    },
-    {
-      nama: 'SafeGuard',
-      gambar: safeGuard,
-      tool: 'Laravel 10 , Bootstrap 5',
-      deskripsi:
-        'Digitalisasi HSSE untuk Keselamatan yang Lebih Cerdas dan Efisien',
-      link: 'https://save-guard.com/',
-    },
-    {
-      nama: 'SQL Adventure : Journey to Database Mastery',
-      gambar: sqla,
-      tool: 'Laravel 10 , Bootstrap 5',
-      deskripsi:
-        'SQL Adventure adalah platform pembelajaran SQL interaktif berbasis storytelling yang memungkinkan pengguna belajar dan mempraktikkan query SQL melalui tantangan dan latihan langsung. ',
-      link: 'https://sqla.gerbangbelajar.id/',
-    },
-  ]
+  {
+    nama: 'SQL Adventure : Journey to Database Mastery',
+    gambar: sqla,
+    tool: 'Laravel 10 , Bootstrap 5',
+    deskripsi:
+      'SQL Adventure adalah platform pembelajaran SQL interaktif berbasis storytelling yang memungkinkan pengguna belajar dan mempraktikkan query SQL melalui tantangan dan latihan langsung. ',
+    link: 'https://sqla.gerbangbelajar.id/',
+  },
+  {
+    nama: 'SafeGuard',
+    gambar: safeGuard,
+    tool: 'Laravel 10 , Bootstrap 5',
+    deskripsi:
+      'Digitalisasi HSSE untuk Keselamatan yang Lebih Cerdas dan Efisien',
+    link: 'https://save-guard.com/',
+  },
+  {
+    nama: 'Sistem Informasi Point Of Sales',
+    gambar: POS,
+    tool: 'Laravel 10 , Bootstrap 5',
+    deskripsi:
+      'Sistem Informasi Point of Sales (POS) ini menyediakan dashboard intuitif dan grafik informatif untuk memantau penjualan real-time, mengelola produk, dan menganalisis tren penjualan.',
+    link: 'https://github.com/bangkit16/PWL_2024',
+  },
+  {
+    nama: 'Personal Web Portofolio',
+    gambar: portofolio,
+    tool: 'ReactJs , Tailwind',
+    deskripsi:
+      'Portofolio web pribadi yang digunankan menampilkan karya, proyek, keterampilan, dan pengalaman saya, digunakan untuk menunjukkan kemampuan dan pencapaian kepada calon klien atau pemberi kerja.',
+    link: 'https://github.com/bangkit16/portofolio',
+  },
+  {
+    nama: 'Sistem Informasi Inventaris Perkakas JTI',
+    gambar: inventaris,
+    tool: 'Laravel 10 , Bootstrap 5',
+    deskripsi:
+      'Sebuah aplikasi web untuk mengelola dan melacak inventaris barang jurusan Teknologi Informasi Politeknik Negeri Malang secara efisien dan terorganisir.',
+    link: 'https://github.com/bangkit16/Inventaris',
+  },
+  {
+    nama: 'Sistem Informasi Jasa Event Organizer (SIJEO) ',
+    gambar: sijeo,
+    tool: 'CodeIgniter4 , Bootstrap 5',
+    deskripsi:
+      'Aplikasi untuk mengelola acara, pendaftaran, pembayaran, manajemen klien, dan vendor, serta menyediakan pelaporan dan notifikasi untuk mempermudah perencanaan dan pencarian vendor vendor yang ada.',
+    link: 'https://github.com/bangkit16/sijeo-mp',
+  },
+  {
+    nama: 'Sistem Pendukung Keputusan MAUT',
+    gambar: maut,
+    tool: 'CodeIgniter4 , Bootstrap 5',
+    deskripsi:
+      'Sebuah web sederhana yang dikembangkan untuk membantu pengambilan keputusan menggunakan metode Multi-Attribute Utility Theory (MAUT). Web ini untuk membantu pengambilan keputusan dengan mengelola kriteria dan alternatif secara efisien.',
+    link: 'https://github.com/bangkit16/SPKMAUT',
+  },
+];
 
   const [visibleCount, setVisibleCount] = useState(3)
 

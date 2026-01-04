@@ -58,6 +58,14 @@ function Footer() {
                   </li>
                   <li className="group">
                     <a
+                      href="#experience"
+                      className="text-base flex py-2 ml-3 group-hover:text-green-500"
+                    >
+                      Pengalaman
+                    </a>
+                  </li>
+                  <li className="group">
+                    <a
                       href="#skills"
                       className="text-base flex py-2 ml-3 group-hover:text-green-500"
                     >

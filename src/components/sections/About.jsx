@@ -13,16 +13,16 @@ function About() {
                 Yuk, Mari berkolaborasi bersama 🙌🙌
               </h2>
               <p className="lg:text-lg font-medium text-base text-slate-500 max-w-xl">
-                Halo! Saya Mahasiswa jurusan Teknologi Informasi program studi
+                Halo! Saya Fresh Graduate jurusan Teknologi Informasi program studi
                 Sistem Informasi Bisnis di Politeknik Negeri Malang dengan IPK
-                3.75 dan seorang web developer yang berdedikasi.
+                3.75 dan seorang web developer yang berdedkasi.
                 Saya bersemangat dalam menciptakan solusi web yang inovatif dan
                 memiliki keahlian dalam berbagai teknologi web untuk
                 mengembangkan aplikasi yang responsif dan fungsional.
               </p>
               <div className="mt-5">
                 <a
-                  href="https://drive.google.com/file/d/1C1wY1PwMRufZSOsf4T1x3ByH5o2qtw0U/view?usp=sharing"
+                  href="https://drive.google.com/file/d/11NWLrNKGJtG2kavzIlmDY-Go6sQSlrEu/view?usp=sharing"
                   target="blank"
                   className="rounded-xl lg:text-xl  bg-green-500 text-white font-semibold py-2 px-4 text-base hover:bg-white border-2 border-green-500 hover:text-green-500 transition"
                 >
@@ -37,7 +37,7 @@ function About() {
                 </a>
               </div>
             </div>
-            <div className="lg:w-1/2 w-full px-4">
+            <div className="lg:w-1/2 w-full px-4 mt-5 lg:mt-0  ">
               <h3 className="lg:pt-10 lg:text-3xl font-semibold text-slate-900 text-2xl mb-3 max-w-xl">
                 Let's Connect
               </h3>

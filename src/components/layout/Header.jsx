@@ -65,6 +65,14 @@ function Header() {
                 </li>
                 <li className="group">
                   <a
+                    href="#experience"
+                    className="text-base flex text-slate-900 py-2 mx-8 group-hover:text-green-500"
+                  >
+                    Pengalaman
+                  </a>
+                </li>
+                <li className="group">
+                  <a
                     href="#skills"
                     className="text-base flex text-slate-900 py-2 mx-8 group-hover:text-green-500"
                   >

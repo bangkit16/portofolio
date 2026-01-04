@@ -5,6 +5,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+ scroll-behavior: smooth;
+}
 
 .animate-spin {
  animation: spin 10s linear infinite;

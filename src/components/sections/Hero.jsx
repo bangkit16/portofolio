@@ -21,6 +21,7 @@ function Hero() {
                   'Fullstack Engineer',
                   'Web Developer',
                   'Backend Engineer',
+                  'Frontend Engineer',
                 ]}
                 speed={100}
                 eraseSpeed={50}
@@ -30,8 +31,7 @@ function Hero() {
               <p className="text-base lg:text-xl mt-5">
                 Berpengalaman dalam pengembangan aplikasi khususnya di bidang
                 Pengembangan Website sebagai{' '}
-                <span className="font-bold">Fullstack Developer</span> dan{' '}
-                <span className="font-bold">Backend Developer</span>.{' '}
+                <span className="font-bold">Fullstack Developer</span> 
               </p>
               <span></span>
               <br />

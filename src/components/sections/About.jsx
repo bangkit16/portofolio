@@ -15,7 +15,7 @@ function About() {
               <p className="lg:text-lg font-medium text-base text-slate-500 max-w-xl">
                 Halo! Saya Fresh Graduate jurusan Teknologi Informasi program studi
                 Sistem Informasi Bisnis di Politeknik Negeri Malang dengan IPK
-                3.75 dan seorang web developer yang berdedkasi.
+                3.70 dan seorang web developer yang berdedkasi.
                 Saya bersemangat dalam menciptakan solusi web yang inovatif dan
                 memiliki keahlian dalam berbagai teknologi web untuk
                 mengembangkan aplikasi yang responsif dan fungsional.

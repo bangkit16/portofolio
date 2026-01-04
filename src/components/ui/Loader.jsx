@@ -1,6 +1,6 @@
 function Loader() {
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white/80 backdrop-blur-sm transition-opacity duration-500">
+    <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-white/80 backdrop-blur-sm transition-opacity duration-500">
       <div className="relative flex flex-col items-center">
         {/* Pulse Effect Background */}
         <div className="absolute inset-0 bg-green-500 rounded-full opacity-50 animate-ping w-24 h-24"></div>

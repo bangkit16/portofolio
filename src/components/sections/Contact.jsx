@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { fadeLeft, fadeRight, viewport } from '../../lib/animations'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -32,7 +34,13 @@ const Contact = () => {
       <section id="contact">
         <div className="container mx-auto px-4 pt-24 mb-20">
           <div className="flex flex-wrap ">
-            <div className="w-full mx-auto p-6  lg:w-1/2">
+            <motion.div
+              className="w-full mx-auto p-6  lg:w-1/2"
+              variants={fadeLeft}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewport}
+            >
               <h4 className="text-lg  font-bold uppercase mb-3 text-green-500 ">
                 kontak
               </h4>
@@ -108,9 +116,18 @@ const Contact = () => {
                   Bangkit Maulana Caniago
                 </span>
               </a>
-            </div>
-            <div className="w-full px-4 lg:w-1/2">
-              <div className="max-w-2xl mx-auto p-6 bg-white border rounded-md shadow-md mt-8 lg:mt-20">
+            </motion.div>
+            <motion.div
+              className="w-full px-4 lg:w-1/2"
+              variants={fadeRight}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewport}
+            >
+              <motion.div
+                className="max-w-2xl mx-auto p-6 bg-white border rounded-md shadow-md mt-8 lg:mt-20"
+                variants={fadeRight}
+              >
                 <form onSubmit={handleSubmit}>
                   <div className="mb-4">
                     <label
@@ -170,8 +187,8 @@ const Contact = () => {
                     Send Message
                   </button>
                 </form>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </section>

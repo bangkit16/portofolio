@@ -1,4 +1,6 @@
 import ExperienceCard from "../ui/ExperienceCard";
+import { motion } from "framer-motion";
+import { fadeUp, container, viewport } from "../../lib/animations";
 
 function Experience() {
   const experiences = [
@@ -64,9 +66,16 @@ function Experience() {
             lunak, dari magang hingga proyek freelance.
           </p>
 
-          <div className="flex flex-col lg:flex-col max-w-full mx-auto gap-1">
+          <motion.div
+            className="flex flex-col lg:flex-col max-w-full mx-auto gap-1"
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewport}
+          >
             {experiences.map((exp, index) => (
-              <ExperienceCard
+              <motion.div key={index} variants={fadeUp}>
+                <ExperienceCard
                 key={index}
                 company={exp.company}
                 role={exp.role}
@@ -75,8 +84,9 @@ function Experience() {
                 description={exp.description}
                 responsibilities={exp.responsibilities}
               />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

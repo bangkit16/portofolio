@@ -1,4 +1,6 @@
 import SkillItem from '../ui/SkillItem'
+import { motion } from 'framer-motion'
+import { fadeUp, container, viewport } from '../../lib/animations'
 
 function Skills() {
   const skillsData = {
@@ -108,9 +110,18 @@ function Skills() {
           responsif dan fungsional.
         </p>
 
-        <div className="w-full flex flex-col lg:grid lg:grid-cols-3 gap-8 lg:gap-2">
+        <motion.div
+          className="w-full flex flex-col lg:grid lg:grid-cols-3 gap-8 lg:gap-2"
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+        >
           {/* Frontend */}
-          <div className="w-full bg-white/50 rounded-2xl p-6 transition-shadow">
+          <motion.div
+            variants={fadeUp}
+            className="w-full bg-white/50 rounded-2xl p-6 transition-shadow"
+          >
             <h3 className="text-xl lg:text-2xl font-bold text-center mb-8 text-green-500 border-b pb-4 border-slate-200">
               Frontend Development
             </h3>
@@ -125,10 +136,13 @@ function Skills() {
                 />
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Backend */}
-          <div className="w-full bg-white/50 rounded-2xl p-6 transition-shadow">
+          <motion.div
+            variants={fadeUp}
+            className="w-full bg-white/50 rounded-2xl p-6 transition-shadow"
+          >
             <h3 className="text-xl lg:text-2xl font-bold text-center mb-8 text-green-500 border-b pb-4 border-slate-200">
               Backend Development
             </h3>
@@ -143,10 +157,13 @@ function Skills() {
                 />
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Database */}
-          <div className="w-full bg-white/50 rounded-2xl p-6 transition-shadow">
+          <motion.div
+            variants={fadeUp}
+            className="w-full bg-white/50 rounded-2xl p-6 transition-shadow"
+          >
             <h3 className="text-xl lg:text-2xl font-bold text-center mb-8 text-green-500 border-b pb-4 border-slate-200">
               Database Management
             </h3>
@@ -161,8 +178,8 @@ function Skills() {
                 />
               ))}
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   )

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { AnimatePresence } from 'framer-motion'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import Hero from './components/sections/Hero'
@@ -33,7 +34,7 @@ function App() {
 
   return (
     <>
-      {isLoading && <Loader />}
+      <AnimatePresence>{isLoading && <Loader />}</AnimatePresence>
       <Header />
       <Hero className="" />
       <About className="" />

@@ -1,5 +1,7 @@
 import portoIMG from '/img/portoimg.png'
 import TypingEffect from 'react-typing-effect'
+import { motion } from 'framer-motion'
+import { fadeLeft, fadeRight } from '../../lib/animations'
 
 function Hero() {
   return (
@@ -7,7 +9,12 @@ function Hero() {
       <section id="hero">
         <div className="container mx-auto px-4 overflow-hidden mb-16">
           <div className=" flex w-full flex-wrap  mt-32 lg:mt-16 self-center  ">
-            <div className="block w-full my-auto self-center lg:w-1/2">
+            <motion.div
+              className="block w-full my-auto self-center lg:w-1/2"
+              variants={fadeLeft}
+              initial="hidden"
+              animate="visible"
+            >
               <span className="font-bold text-green-500 text-base lg:text-2xl">
                 Halo semua, Saya
               </span>
@@ -41,8 +48,13 @@ function Hero() {
               >
                 Contact Me
               </a>
-            </div>
-            <div className="flex  w-full self-end content-center lg:w-1/2">
+            </motion.div>
+            <motion.div
+              className="flex  w-full self-end content-center lg:w-1/2"
+              variants={fadeRight}
+              initial="hidden"
+              animate="visible"
+            >
               <div className="mt-10 relative">
                 <img
                   className=" mx-auto inset-0 max-w-full center"
@@ -80,7 +92,7 @@ function Hero() {
                   </svg>
                 </span>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

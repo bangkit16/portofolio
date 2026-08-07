@@ -2,7 +2,7 @@
 function ProjectCard({ nama, gambar, tool, deskripsi, link }) {
   return (
     <>
-      <div className="w-full lg:w-1/3 relative  transition-transform">
+      <div className="w-full relative  transition-transform">
         <div className=" border-slate-200 w-full h-[500px] relative bg-transparent rounded-xl m-2 p-4 flex flex-col">
           <div className="w-full h-[13rem]  overflow-hidden flex rounded-md">
             <img

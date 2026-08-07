@@ -1,4 +1,6 @@
 import EducationCard from "../ui/EducationCard";
+import { motion } from "framer-motion";
+import { fadeUp, container, viewport } from "../../lib/animations";
 
 function Education() {
   const educations = [
@@ -40,18 +42,25 @@ function Education() {
             bidang teknologi informasi.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewport}
+          >
             {educations.map((edu, index) => (
-              <EducationCard
-                key={index}
-                school={edu.school}
-                type={edu.type}
-                period={edu.period}
-                location={edu.location}
-                image={edu.image}
-              />
+              <motion.div key={index} variants={fadeUp}>
+                <EducationCard
+                  school={edu.school}
+                  type={edu.type}
+                  period={edu.period}
+                  location={edu.location}
+                  image={edu.image}
+                />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -1,6 +1,7 @@
-/* eslint-disable react/prop-types */
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import ProjectCard from '../ui/ProjectCard'
+import { fadeUp, container, viewport } from '../../lib/animations'
 import inventaris from '/img/inventaris.png'
 import maut from '/img/maut.png'
 import portofolio from '/img/portofolio.png'
@@ -99,18 +100,25 @@ function Project() {
               Berikut adalah beberapa proyek yang menunjukkan kemampuan saya
               dalam mengembangkan aplikasi web yang efektif dan inovatif.
             </p>
-            <div className="flex flex-wrap transition">
+            <motion.div
+              className="flex flex-wrap transition"
+              variants={container}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewport}
+            >
               {pro.slice(0, visibleCount).map((item, index) => (
-                <ProjectCard
-                  key={index}
-                  nama={item.nama}
-                  gambar={item.gambar}
-                  tool={item.tool}
-                  deskripsi={item.deskripsi}
-                  link={item.link}
-                />
+                <motion.div key={index} variants={fadeUp} className="w-full lg:w-1/3">
+                  <ProjectCard
+                    nama={item.nama}
+                    gambar={item.gambar}
+                    tool={item.tool}
+                    deskripsi={item.deskripsi}
+                    link={item.link}
+                  />
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
             {visibleCount < pro.length && (
               <div className="flex justify-center mt-4">
                 <button

@@ -1,37 +1,53 @@
-import ExperienceCard from '../ui/ExperienceCard'
+import ExperienceCard from "../ui/ExperienceCard";
 
 function Experience() {
   const experiences = [
     {
-      company: 'PT AZ LOGISTIK (muatmuat.com) - Surabaya, Indonesia',
-      date: 'Oct 2025 - Dec 2025',
-      role: 'Frontend Developer (AI Operator)',
-      type: 'Freelance',
+      company: "CV ALAM JAYA TEXTILE - Tulungagung, Indonesia",
+      date: "April 2026 - Sekarang",
+      role: "Fullstack Developer",
+      type: "Kontrak",
       description:
-        'muatmuat adalah platform ekosistem logistik digital yang menghubungkan pemilik muatan dengan penyedia jasa angkut dan tenaga kerja melalui aplikasi terintegrasi.',
+        "Alam Jaya Tekstil adalah perusahaan yang berjalan di bidang produksi dan operasional tekstil.",
       responsibilities: [
-        'Mengembangkan antarmuka pengguna (UI) yang responsif dan intuitif menggunakan AI',
-        'Mengintegrasikan API untuk 5+ modul utama sehingga meningkatkan stabilitas pertukaran data.',
-        'Melakukan pengujian fungsional aplikasi untuk meningkatkan kualitas sistem sebelum rilis.',
-        'Berkolaborasi dengan 10+ anggota tim frontend & backend dari tahap desain hingga implementasi.',
+        "Mengembangkan sistem ERP manufaktur produksi tekstil full-stack menggunakan Express.js + TypeScript di backend dan Next.js 14 di frontend.",
+        "Mendesain arsitektur multi-role dengan 15+ modul akses terpisah: Potong, Press, Print, Sublim, Jahit, QC, Packing, Kurir, Resi, Stok Gudang, Stok Bahan, Stok Resi, Retur, Reject, Admin Keuangan, Admin Marketing, Design, Super Admin.",
+        "Mengimplementasikan REST API dengan Express.js, Prisma ORM, PostgreSQL, JWT authentication, Swagger docs, dan Socket.IO real-time.",
+        "Membangun worker queue system menggunakan BullMQ + Redis untuk upload data dari marketplace (Shopee, TikTok) dan cashflow.",
+        "Mengembangkan fitur real-time tracking produksi: stok potong → penjahitan → QC → press → packing → pengiriman via resi",
+        "Mengelola file upload ke AWS S3 dengan multer untuk gambar produk",
       ],
     },
     {
-      company: 'CV DUTA TECHNOLOGY - Malang, Indonesia',
-      date: 'Aug 2024 - Nov 2024',
-      role: 'Fullstack Developer',
-      type: 'Magang',
+      company: "PT AZ LOGISTIK (muatmuat.com) - Surabaya, Indonesia",
+      date: "Oct 2025 - Dec 2025",
+      role: "Frontend Developer (AI Operator)",
+      type: "Freelance",
       description:
-        'Software House Melayani segala pelayanan Software, meliputi Web base, Mobile App, Desktop Base, dan konsultasi dan pembangunan Jaringan Komputer',
+        "muatmuat adalah platform ekosistem logistik digital yang menghubungkan pemilik muatan dengan penyedia jasa angkut dan tenaga kerja melalui aplikasi terintegrasi.",
       responsibilities: [
-        'Membangun sistem PMB RPL yang digunakan oleh staff kampus STIMATA untuk proses validasi dokumen mahasiswa.',
-        'Berkontribusi dalam proyek kampus selama 3 bulan dengan pendekatan project-based.',
-        'Mengimplementasikan antarmuka modern berbasis Laravel + Livewire dengan Keen Theme (Bootstrap).',
-        'Mengembangkan 5+ fitur utama menggunakan Laravel, Livewire, dan Bootstrap.',
-        'Membangun fitur untuk 4 jenis pendaftaran (Peserta Didik Baru, Beasiswa, RPL, Alih Jenjang)',
+        "Mengembangkan antarmuka pengguna (UI) yang responsif dan intuitif menggunakan AI",
+        "Mengintegrasikan API untuk 5+ modul utama sehingga meningkatkan stabilitas pertukaran data.",
+        "Melakukan pengujian fungsional aplikasi untuk meningkatkan kualitas sistem sebelum rilis.",
+        "Berkolaborasi dengan 10+ anggota tim frontend & backend dari tahap desain hingga implementasi.",
       ],
     },
-  ]
+    {
+      company: "CV DUTA TECHNOLOGY - Malang, Indonesia",
+      date: "Aug 2024 - Nov 2024",
+      role: "Fullstack Developer",
+      type: "Magang",
+      description:
+        "Software House Melayani segala pelayanan Software, meliputi Web base, Mobile App, Desktop Base, dan konsultasi dan pembangunan Jaringan Komputer",
+      responsibilities: [
+        "Membangun sistem PMB RPL yang digunakan oleh staff kampus STIMATA untuk proses validasi dokumen mahasiswa.",
+        "Berkontribusi dalam proyek kampus selama 3 bulan dengan pendekatan project-based.",
+        "Mengimplementasikan antarmuka modern berbasis Laravel + Livewire dengan Keen Theme (Bootstrap).",
+        "Mengembangkan 5+ fitur utama menggunakan Laravel, Livewire, dan Bootstrap.",
+        "Membangun fitur untuk 4 jenis pendaftaran (Peserta Didik Baru, Beasiswa, RPL, Alih Jenjang)",
+      ],
+    },
+  ];
 
   return (
     <section id="experience">
@@ -44,11 +60,11 @@ function Experience() {
             Pengalaman Kerja
           </h2>
           <p className="text-center lg:w-4/6 w-5/6 mx-auto font-medium text-base text-slate-500 mb-12 lg:text-lg">
-            Perjalanan profesional saya dalam dunia pengembangan perangkat lunak,
-            dari magang hingga proyek freelance.
+            Perjalanan profesional saya dalam dunia pengembangan perangkat
+            lunak, dari magang hingga proyek freelance.
           </p>
-          
-          <div className="flex flex-col lg:flex-row max-w-full mx-auto gap-4">
+
+          <div className="flex flex-col lg:flex-col max-w-full mx-auto gap-1">
             {experiences.map((exp, index) => (
               <ExperienceCard
                 key={index}
@@ -64,7 +80,7 @@ function Experience() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Experience
+export default Experience;

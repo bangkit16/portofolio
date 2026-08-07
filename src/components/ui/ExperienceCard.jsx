@@ -5,7 +5,7 @@ function ExperienceCard({ company, role, date, description, responsibilities, ty
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="w-full relative transition-transform mb-6">
+    <div className="w-full relative transition-transform mb-2">
       <div 
         className={`border-slate-200 w-full relative bg-transparent rounded-xl p-6 flex flex-col border hover:border-green-500 transition-colors cursor-pointer ${isOpen ? 'border-green-500' : ''}`}
         onClick={() => setIsOpen(!isOpen)}

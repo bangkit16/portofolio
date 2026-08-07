@@ -8,9 +8,18 @@ import POS from '/img/POS.png'
 import safeGuard from '/img/safeguard.png'
 import sijeo from '/img/sijeo.png'
 import sqla from '/img/sqla.png'
+import videobelajar from '/img/videobelajar.png'
 
 function Project() {
   const pro = [
+  {
+    nama: 'Videobelajar : Platform Pembelajaran Video Interaktif',
+    gambar: videobelajar,
+    tool: 'Express.js, TypeScript , ReactJs , Tailwind',
+    deskripsi:
+      'Videobelajar adalah platform pembelajaran video interaktif yang memungkinkan pengguna belajar dan mempraktikkan konsep-konsep teknologi informasi melalui video tutorial yang menarik dan informatif.',
+    link: 'https://videobelajar.bangkit.site/',
+  },
   {
     nama: 'SQL Adventure : Journey to Database Mastery',
     gambar: sqla,

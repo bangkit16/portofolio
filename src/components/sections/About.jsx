@@ -29,7 +29,7 @@ function About() {
                 memiliki keahlian dalam berbagai teknologi web untuk
                 mengembangkan aplikasi yang responsif dan fungsional.
               </p>
-              <div className="mt-5 flex flex-wrap gap-4">
+              <div className="mt-5">
                 <a
                   href="https://drive.google.com/file/d/11NWLrNKGJtG2kavzIlmDY-Go6sQSlrEu/view?usp=sharing"
                   target="blank"

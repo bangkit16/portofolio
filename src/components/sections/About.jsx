@@ -29,7 +29,7 @@ function About() {
                 memiliki keahlian dalam berbagai teknologi web untuk
                 mengembangkan aplikasi yang responsif dan fungsional.
               </p>
-              <div className="mt-5">
+              <div className="mt-5 flex flex-wrap gap-4">
                 <a
                   href="https://drive.google.com/file/d/11NWLrNKGJtG2kavzIlmDY-Go6sQSlrEu/view?usp=sharing"
                   target="blank"
@@ -40,7 +40,7 @@ function About() {
                 <a
                   href="https://drive.google.com/drive/folders/1qBZJ9uVAb2i_-UPJPDi5o2hGbaKY34wS?usp=sharing"
                   target="blank"
-                  className="rounded-xl lg:text-xl  bg-green-500 text-white font-semibold py-2 px-4 text-base hover:bg-white border-2 border-green-500 hover:text-green-500 transition ml-4"
+                  className="rounded-xl lg:text-xl  bg-green-500 text-white font-semibold py-2 px-4 text-base hover:bg-white border-2 border-green-500 hover:text-green-500 transition"
                 >
                   Lihat Sertifikat
                 </a>

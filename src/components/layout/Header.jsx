@@ -1,103 +1,117 @@
-/* eslint-disable no-unused-vars */
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import ThemeToggle from '../ui/ThemeToggle'
 
 function Header() {
-  const [ham, setHam] = useState('')
-  const [fix, setFix] = useState('')
-  const navMenu = document.querySelector('#nav-menu')
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  window.onscroll = function () {
-    const header = document.querySelector('header')
-    const fixedNav = header.offsetTop
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)
+    }
 
-    window.pageYOffset > fixedNav ? setFix('navbar-fixed') : setFix('')
-  }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
-  function eventHandler(e) {
-    navMenu.classList.toggle('hidden')
-    ham === '' ? setHam('hamburger-active') : setHam('')
-  }
+  const navLinks = [
+    { href: '#hero', label: 'Home' },
+    { href: '#about', label: 'Tentang Saya' },
+    { href: '#experience', label: 'Pengalaman' },
+    { href: '#skills', label: 'Skills' },
+    { href: '#projek', label: 'Portfolio' },
+    { href: '#contact', label: 'Kontak' },
+  ]
+
+  const closeMenu = () => setIsMobileMenuOpen(false)
 
   return (
     <header
-      className={`w-full absolute top-0 ${fix}  bg-transparent z-10 items-center flex transition duration-100 ease-in-out`}
+      className={`w-full fixed top-0 left-0 z-40 transition-all duration-300 ${
+        isScrolled
+          ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm py-3'
+          : 'bg-transparent py-5'
+      }`}
     >
-      <div className="container mx-auto">
-        <div className=" px-4 flex items-center justify-between relative">
-          <div className="py-5 hover:text-green-700 transition ease-in-out">
-            <a href="#" className="py-10 my-10 font-bold text-xl">
-              BANGKIT <span className="text-green-500">CANIAGO</span>
-            </a>
-          </div>
-          <div className="px-4 flex items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <a
+            href="#hero"
+            className="text-xl font-bold tracking-tight text-slate-900 dark:text-white hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors"
+          >
+            BANGKIT <span className="text-emerald-500">CANIAGO</span>
+          </a>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-8" aria-label="Main Navigation">
+            <ul className="flex items-center gap-6">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <div className="pl-4 border-l border-slate-200 dark:border-slate-800">
+              <ThemeToggle />
+            </div>
+          </nav>
+
+          {/* Mobile Actions */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <ThemeToggle />
             <button
-              id="hamburger"
-              name="hamburger"
-              className={`block absolute  ${ham} lg:hidden right-4`}
               type="button"
-              onClick={() => eventHandler()}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle navigation menu"
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-navigation"
+              className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500"
             >
-              <span className="hamburger-line origin-top-left transtion duration-300 ease-in-out"></span>
-              <span className="hamburger-line transtion duration-300 ease-in-out"></span>
-              <span className="hamburger-line origin-bottom-left transtion duration-300 ease-in-out"></span>
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+              >
+                {isMobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                )}
+              </svg>
             </button>
-            <nav
-              id="nav-menu"
-              className="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
-            >
-              <ul className="block lg:flex">
-                <li className="group">
-                  <a
-                    href="#hero"
-                    className="text-base flex text-slate-900 py-2 mx-8 group-hover:text-green-500"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li className="group">
-                  <a
-                    href="#about"
-                    className="text-base flex text-slate-900 py-2 mx-8 group-hover:text-green-500"
-                  >
-                    Tentang Saya
-                  </a>
-                </li>
-                <li className="group">
-                  <a
-                    href="#experience"
-                    className="text-base flex text-slate-900 py-2 mx-8 group-hover:text-green-500"
-                  >
-                    Pengalaman
-                  </a>
-                </li>
-                <li className="group">
-                  <a
-                    href="#skills"
-                    className="text-base flex text-slate-900 py-2 mx-8 group-hover:text-green-500"
-                  >
-                    Skills
-                  </a>
-                </li>
-                <li className="group">
-                  <a
-                    href="#projek"
-                    className="text-base flex text-slate-900 py-2 mx-8 group-hover:text-green-500"
-                  >
-                    Portfolio
-                  </a>
-                </li>
-                <li className="group">
-                  <a
-                    href="#contact"
-                    className="text-base flex text-slate-900 py-2 mx-8 group-hover:text-green-500"
-                  >
-                    Kontak
-                  </a>
-                </li>
-              </ul>
-            </nav>
           </div>
         </div>
+
+        {/* Mobile Navigation Dropdown */}
+        {isMobileMenuOpen && (
+          <nav
+            id="mobile-navigation"
+            aria-label="Mobile Navigation"
+            className="lg:hidden mt-3 p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-lg"
+          >
+            <ul className="flex flex-col gap-3">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    onClick={closeMenu}
+                    className="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
       </div>
     </header>
   )

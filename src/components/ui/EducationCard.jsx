@@ -1,22 +1,24 @@
 /* eslint-disable react/prop-types */
 function EducationCard({ school, type, period, location, image }) {
   return (
-    <div className="w-full relative transition-transform mb-2">
-      <div className="border-slate-200 w-full relative bg-transparent rounded-xl p-6 flex flex-col border hover:border-green-500 transition-colors h-full">
-        <div className="flex justify-center mb-4">
+    <div className="w-full h-full">
+      <div className="h-full bg-white dark:bg-slate-800/80 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 flex flex-col items-center text-center hover:border-emerald-500 dark:hover:border-emerald-500 transition-colors shadow-sm">
+        <div className="w-20 h-20 mb-4 p-2 bg-slate-50 dark:bg-slate-700/50 rounded-xl flex items-center justify-center">
           <img
             src={image}
             alt={school}
-            className="w-24 h-24 object-contain rounded-xl  p-2"
+            className="max-h-full max-w-full object-contain"
           />
         </div>
-        <h4 className="font-bold text-xl text-slate-900 text-center">{school}</h4>
-        <span className="font-semibold text-base text-green-500 text-center">
+        <h4 className="font-bold text-lg text-slate-900 dark:text-white mb-1">
+          {school}
+        </h4>
+        <span className="font-medium text-sm text-emerald-600 dark:text-emerald-400 mb-3">
           {type}
         </span>
-        <div className="flex flex-col gap-1 mt-2 text-slate-500 text-sm lg:text-base text-center">
+        <div className="mt-auto flex flex-col gap-1 text-xs sm:text-sm text-slate-500 dark:text-slate-400">
           <span>{location}</span>
-          <span>{period}</span>
+          <span className="font-semibold text-slate-600 dark:text-slate-300">{period}</span>
         </div>
       </div>
     </div>

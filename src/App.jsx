@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion'
+import { ThemeProvider } from './context/ThemeContext'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import Hero from './components/sections/Hero'
@@ -15,15 +16,12 @@ function App() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    // Simulate loading time or wait for resources
     const timer = setTimeout(() => {
       setIsLoading(false)
-    }, 2000) // 2 seconds delay
-
+    }, 1500)
     return () => clearTimeout(timer)
   }, [])
 
-  
   useEffect(() => {
     if (isLoading) {
       document.body.style.overflow = 'hidden'
@@ -33,18 +31,22 @@ function App() {
   }, [isLoading])
 
   return (
-    <>
+    <ThemeProvider>
       <AnimatePresence>{isLoading && <Loader />}</AnimatePresence>
-      <Header />
-      <Hero className="" />
-      <About className="" />
-      <Experience />
-      <Education />
-      <Skills />
-      <Project />
-      <Contact />
-      <Footer />
-    </>
+      <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50">
+        <Header />
+        <main className="flex-grow">
+          <Hero />
+          <About />
+          <Experience />
+          <Education />
+          <Skills />
+          <Project />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   )
 }
 

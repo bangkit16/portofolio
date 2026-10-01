@@ -6,7 +6,6 @@ import inventaris from '/img/inventaris.png'
 import maut from '/img/maut.png'
 import aluna from '/img/aluna.png'
 import tesla from '/img/tesla.png'
-// import portofolio from '/img/portofolio.png'
 import POS from '/img/POS.png'
 import safeGuard from '/img/safeguard.png'
 import sijeo from '/img/sijeo.png'
@@ -18,73 +17,73 @@ function Project() {
     {
       nama: "Tesla Education Center",
       gambar: tesla,
-      tool: "TypeScript , NextJs , Tailwind",
+      tool: "TypeScript, Next.js, Tailwind CSS",
       deskripsi:
-        "Tesla Education Center adalah platform edukasi interaktif yang dirancang untuk membantu pengguna belajar, memahami, dan mempraktikkan berbagai konsep ilmu pengetahuan serta teknologi melalui materi pembelajaran yang terstruktur dan mendalam.",
+        "Platform edukasi interaktif untuk belajar dan mempraktikkan konsep teknologi melalui materi terstruktur.",
       link: "https://tesla-education-center.vercel.app/",
     },
     {
       nama: "Aluna Pilates Studio",
       gambar: aluna,
-      tool: "TypeScript , NextJs , Tailwind",
+      tool: "TypeScript, Next.js, Tailwind CSS",
       deskripsi:
-        "Aluna Pilates Studio adalah platform digital yang menyediakan panduan, jadwal, dan informasi komprehensif mengenai latihan pilates untuk mendukung gaya hidup sehat, kebugaran fisik, dan keseimbangan tubuh pengguna.",
+        "Platform digital penyedia jadwal latihan pilates dan sistem reservasi kelas untuk gaya hidup sehat.",
       link: "https://aluna-pilates-studio.vercel.app/",
     },
     {
-      nama: "Videobelajar : Platform Pembelajaran Video Interaktif",
+      nama: "Videobelajar: Platform Belajar Interaktif",
       gambar: videobelajar,
-      tool: "Express.js, TypeScript , ReactJs , Tailwind",
+      tool: "Express.js, TypeScript, React, Tailwind CSS",
       deskripsi:
-        "Videobelajar adalah platform pembelajaran video interaktif yang memungkinkan pengguna belajar dan mempraktikkan konsep-konsep teknologi informasi melalui video tutorial yang menarik dan informatif.",
+        "Platform kursus video online interaktif untuk mempelajari teknologi informasi dengan modul praktis.",
       link: "https://videobelajar.bangkit.site/",
     },
     {
-      nama: "SQL Adventure : Journey to Database Mastery",
+      nama: "SQL Adventure: Journey to Mastery",
       gambar: sqla,
-      tool: "Laravel 10 , Bootstrap 5",
+      tool: "Laravel 10, Bootstrap 5",
       deskripsi:
-        "SQL Adventure adalah platform pembelajaran SQL interaktif berbasis storytelling yang memungkinkan pengguna belajar dan mempraktikkan query SQL melalui tantangan dan latihan langsung. ",
+        "Platform interaktif berbasis storytelling untuk menguasai query SQL melalui tantangan gamifikasi.",
       link: "https://github.com/bangkit16/livesqla",
     },
     {
-      nama: "SafeGuard",
+      nama: "SafeGuard HSSE System",
       gambar: safeGuard,
-      tool: "Laravel 10 , Bootstrap 5",
+      tool: "Laravel 10, Bootstrap 5",
       deskripsi:
-        "Digitalisasi HSSE untuk Keselamatan yang Lebih Cerdas dan Efisien",
+        "Digitalisasi kepatuhan keselamatan kerja (HSSE) untuk monitoring insiden dan inspeksi operasional.",
       link: "https://save-guard.com/",
     },
     {
-      nama: "Sistem Informasi Point Of Sales",
+      nama: "Point of Sales (POS) System",
       gambar: POS,
-      tool: "Laravel 10 , Bootstrap 5",
+      tool: "Laravel 10, Bootstrap 5",
       deskripsi:
-        "Sistem Informasi Point of Sales (POS) ini menyediakan dashboard intuitif dan grafik informatif untuk memantau penjualan real-time, mengelola produk, dan menganalisis tren penjualan.",
+        "Dashboard kasir dan analytics penjualan real-time untuk manajemen inventaris ritel.",
       link: "https://github.com/bangkit16/PWL_2024",
     },
     {
-      nama: "Sistem Informasi Inventaris Perkakas JTI",
+      nama: "Inventaris Perkakas JTI",
       gambar: inventaris,
-      tool: "Laravel 10 , Bootstrap 5",
+      tool: "Laravel 10, Bootstrap 5",
       deskripsi:
-        "Sebuah aplikasi web untuk mengelola dan melacak inventaris barang jurusan Teknologi Informasi Politeknik Negeri Malang secara efisien dan terorganisir.",
+        "Aplikasi web pelacakan inventaris alat lab jurusan Teknologi Informasi Polinema.",
       link: "https://github.com/bangkit16/Inventaris",
     },
     {
-      nama: "Sistem Informasi Jasa Event Organizer (SIJEO) ",
+      nama: "SIJEO: Event Organizer System",
       gambar: sijeo,
-      tool: "CodeIgniter4 , Bootstrap 5",
+      tool: "CodeIgniter 4, Bootstrap 5",
       deskripsi:
-        "Aplikasi untuk mengelola acara, pendaftaran, pembayaran, manajemen klien, dan vendor, serta menyediakan pelaporan dan notifikasi untuk mempermudah perencanaan dan pencarian vendor vendor yang ada.",
+        "Aplikasi pengelolaan vendor, reservasi acara, dan invoice pembayaran terintegrasi.",
       link: "https://github.com/bangkit16/sijeo-mp",
     },
     {
-      nama: "Sistem Pendukung Keputusan MAUT",
+      nama: "SPK MAUT (Decision Support)",
       gambar: maut,
-      tool: "CodeIgniter4 , Bootstrap 5",
+      tool: "CodeIgniter 4, Bootstrap 5",
       deskripsi:
-        "Sebuah web sederhana yang dikembangkan untuk membantu pengambilan keputusan menggunakan metode Multi-Attribute Utility Theory (MAUT). Web ini untuk membantu pengambilan keputusan dengan mengelola kriteria dan alternatif secara efisien.",
+        "Sistem pendukung keputusan menggunakan algoritma Multi-Attribute Utility Theory (MAUT).",
       link: "https://github.com/bangkit16/SPKMAUT",
     },
   ];
@@ -92,55 +91,55 @@ function Project() {
   const [visibleCount, setVisibleCount] = useState(3)
 
   return (
-    <>
-      <section id="projek">
-        <div className="container mx-auto mb-20 mt-20 pt-40">
-          <div className="w-full px-4">
-            <h4 className="text-lg text-center font-bold uppercase mb-3 text-green-500 ">
-              portofolio
-            </h4>
-            <h2 className="text-center font-bold text-3xl mb-8 lg:text-4xl ">
-              PROJEK
-            </h2>
-            <p className="text-center lg:w-4/6 w-5/6 mx-auto font-medium text-base text-slate-500 mb-8 lg:text-lg">
-              Berikut adalah beberapa proyek yang menunjukkan kemampuan saya
-              dalam mengembangkan aplikasi web yang efektif dan inovatif.
-            </p>
-            <div className="flex flex-wrap">
-              <AnimatePresence mode="popLayout">
-                {pro.slice(0, visibleCount).map((item) => (
-                  <motion.div
-                    key={item.nama}
-                    variants={fadeUp}
-                    initial="hidden"
-                    animate="visible"
-                    exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.2 } }}
-                    layout
-                    className="w-full lg:w-1/3"
-                  >
-                    <ProjectCard
-                      nama={item.nama}
-                      gambar={item.gambar}
-                      tool={item.tool}
-                      deskripsi={item.deskripsi}
-                      link={item.link}
-                    />
-                  </motion.div>
-                ))}
-              </AnimatePresence>
-            </div>
-            <div className="flex justify-center mt-4">
-              <button
-                onClick={() => setVisibleCount((prev) => (prev >= pro.length ? 3 : prev + 3))}
-                className="border-green-500 border-[3px] w-fit hover:text-green-500 font-semibold bottom-0 mb-0 lg:mt-auto mt-2 text-white bg-green-500 transition-colors rounded-full px-5 py-2 text-xl hover:bg-white"
-              >
-                {visibleCount >= pro.length ? 'Tutup' : 'Lihat Lainnya'}
-              </button>
-            </div>
-          </div>
+    <section id="projek" className="py-20 bg-slate-100/50 dark:bg-slate-900/40">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <span className="text-sm font-bold tracking-wider uppercase text-emerald-600 dark:text-emerald-400">
+            Portfolio
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2 mb-4">
+            Proyek Unggulan
+          </h2>
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400">
+            Koleksi aplikasi web nyata yang telah saya kembangkan dari skala frontend interaktif hingga ERP enterprise.
+          </p>
         </div>
-      </section>
-    </>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <AnimatePresence mode="popLayout">
+            {pro.slice(0, visibleCount).map((item) => (
+              <motion.div
+                key={item.nama}
+                variants={fadeUp}
+                initial="hidden"
+                animate="visible"
+                exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.2 } }}
+                layout
+                className="h-full"
+              >
+                <ProjectCard
+                  nama={item.nama}
+                  gambar={item.gambar}
+                  tool={item.tool}
+                  deskripsi={item.deskripsi}
+                  link={item.link}
+                />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
+
+        <div className="flex justify-center mt-12">
+          <button
+            type="button"
+            onClick={() => setVisibleCount((prev) => (prev >= pro.length ? 3 : prev + 3))}
+            className="px-6 py-2.5 rounded-xl text-sm font-semibold text-emerald-600 dark:text-emerald-400 border border-emerald-500 hover:bg-emerald-500 hover:text-white dark:hover:bg-emerald-600 dark:hover:text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          >
+            {visibleCount >= pro.length ? 'Tampilkan Lebih Sedikit' : 'Lihat Proyek Lainnya'}
+          </button>
+        </div>
+      </div>
+    </section>
   )
 }
 

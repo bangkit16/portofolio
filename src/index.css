@@ -1,54 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
- scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-.animate-spin {
- animation: spin 10s linear infinite;
-}
-.glossy-effect {
- position: relative;
- overflow: hidden;
+body {
+  @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50 transition-colors duration-200;
+  font-family: "Poppins", sans-serif;
 }
 
-.glossy-effect::before {
- content: "";
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- background: linear-gradient(145deg, rgba(118, 118, 118, 0.3), rgba(255, 255, 255, 0));
- opacity: 0.5;
- pointer-events: none;
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-* {
- font-family: "Poppins", sans-serif;
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+.animate-spin-reverse {
+  animation: spin-slow 18s linear infinite reverse;
 }
 
 .navbar-fixed {
- @apply fixed z-[9999] bg-white bg-opacity-70;
- backdrop-filter: blur(5px);
- box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
-}
-
-.hamburger-line {
- @apply w-[30px] h-[2px] my-2 block bg-slate-900;
-}
-
-.hamburger-active > span:nth-child(1) {
- @apply rotate-45;
-}
-.hamburger-active > span:nth-child(2) {
- @apply scale-0;
-}
-.hamburger-active > span:nth-child(3) {
- @apply -rotate-45;
+  @apply fixed z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm;
 }

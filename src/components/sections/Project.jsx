@@ -11,9 +11,18 @@ import safeGuard from '/img/safeguard.png'
 import sijeo from '/img/sijeo.png'
 import sqla from '/img/sqla.png'
 import videobelajar from '/img/videobelajar.png'
+import illuminance from '/img/illuminance.png'
 
 function Project() {
   const pro = [
+    {
+      nama: "Illumininance : E-commerce Platform",
+      gambar: illuminance,
+      tool: "TypeScript, Next.js, Tailwind CSS",
+      deskripsi:
+        "Platform e-commerce modern untuk menjual produk digital dan fisik dengan pengalaman pengguna yang menarik.",
+      link: "https://illuminance.bangkit.site",
+    },
     {
       nama: "Tesla Education Center",
       gambar: tesla,

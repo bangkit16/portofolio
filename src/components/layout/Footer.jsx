@@ -1,4 +1,8 @@
+import { useLanguage } from '../../context/LanguageContext'
+
 function Footer() {
+  const { t } = useLanguage()
+
   return (
     <footer className="w-full bg-slate-900 text-slate-200 dark:bg-slate-950 dark:text-slate-300 border-t border-slate-800 dark:border-slate-800/80 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
@@ -12,71 +16,33 @@ function Footer() {
               BANGKIT <span className="text-emerald-400">CANIAGO</span>
             </a>
             <p className="text-sm text-slate-400 leading-relaxed">
-              Fullstack Engineer berfokus pada pengembangan website modern, performan tinggi, dan antarmuka yang ramah pengguna.
+              {t.footer.summary}
             </p>
           </div>
 
           {/* Kolom 2: Navigasi Cepat */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-200 mb-4">
-              Navigasi
+              {t.footer.navTitle}
             </h4>
             <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  href="#hero"
-                  className="hover:text-emerald-400 transition-colors inline-block py-0.5"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  className="hover:text-emerald-400 transition-colors inline-block py-0.5"
-                >
-                  Tentang Saya
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#experience"
-                  className="hover:text-emerald-400 transition-colors inline-block py-0.5"
-                >
-                  Pengalaman
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#skills"
-                  className="hover:text-emerald-400 transition-colors inline-block py-0.5"
-                >
-                  Skills
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#projek"
-                  className="hover:text-emerald-400 transition-colors inline-block py-0.5"
-                >
-                  Portfolio
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  className="hover:text-emerald-400 transition-colors inline-block py-0.5"
-                >
-                  Kontak
-                </a>
-              </li>
+              {t.nav.map((item) => (
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    className="hover:text-emerald-400 transition-colors inline-block py-0.5"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Kolom 3: Kontak Lengkap */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-200 mb-4">
-              Kontak
+              {t.footer.contactTitle}
             </h4>
             <ul className="space-y-3 text-sm text-slate-300">
               <li>
@@ -252,9 +218,9 @@ function Footer() {
 
         {/* Divider & Copyright */}
         <div className="mt-12 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p>&copy; 2024 Reserved by Bangkit Maulana Caniago</p>
+          <p>&copy; 2024 {t.footer.copyright}</p>
           <p className="text-slate-400">
-            Built with React, Vite &amp; Tailwind CSS
+            {t.footer.builtWith}
           </p>
         </div>
       </div>

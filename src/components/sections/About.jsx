@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { fadeLeft, fadeRight, viewport } from "../../lib/animations";
+import { useLanguage } from "../../context/LanguageContext";
 
 function About() {
+  const { t } = useLanguage();
+
   return (
     <section id="about" className="py-20 bg-slate-100/50 dark:bg-slate-900/40">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,17 +18,13 @@ function About() {
             viewport={viewport}
           >
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-6">
-              Yuk, Mari berkolaborasi bersama!
+              {t.about.title}
             </h2>
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-              Halo! Saya Fresh Graduate jurusan Teknologi Informasi program
-              studi Sistem Informasi Bisnis di Politeknik Negeri Malang dengan
-              IPK 3.70 dan seorang web developer yang berdedikasi.
+              {t.about.bio1}
             </p>
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-              Saya bersemangat dalam menciptakan solusi web yang inovatif dan
-              memiliki keahlian dalam berbagai teknologi web modern untuk
-              mengembangkan aplikasi yang responsif, tangguh, dan fungsional.
+              {t.about.bio2}
             </p>
             <div className="flex flex-wrap gap-4">
               <a
@@ -34,7 +33,7 @@ function About() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-emerald-500 hover:bg-emerald-600 dark:bg-emerald-600 dark:hover:bg-emerald-500 rounded-lg shadow-sm transition-all"
               >
-                Lihat Resume CV
+                {t.about.viewCv}
               </a>
               <a
                 href="https://drive.google.com/drive/folders/1qBZJ9uVAb2i_-UPJPDi5o2hGbaKY34wS?usp=sharing"
@@ -42,7 +41,7 @@ function About() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-lg transition-all"
               >
-                Lihat Sertifikat
+                {t.about.viewCert}
               </a>
             </div>
           </motion.div>
@@ -56,12 +55,10 @@ function About() {
             viewport={viewport}
           >
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">
-              Mari Terhubung
+              {t.about.connectTitle}
             </h3>
             <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-              Jika Anda memiliki tawaran proyek, pertanyaan, atau sekadar ingin
-              berdiskusi seputar software engineering, hubungi saya melalui
-              kanal di bawah ini.
+              {t.about.connectDesc}
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5">
               <a

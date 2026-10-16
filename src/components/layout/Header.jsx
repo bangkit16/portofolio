@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react'
 import ThemeToggle from '../ui/ThemeToggle'
+import LanguageSwitcher from '../ui/LanguageSwitcher'
+import { useLanguage } from '../../context/LanguageContext'
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,14 +17,7 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const navLinks = [
-    { href: '#hero', label: 'Home' },
-    { href: '#about', label: 'Tentang Saya' },
-    { href: '#experience', label: 'Pengalaman' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#projek', label: 'Portfolio' },
-    { href: '#contact', label: 'Kontak' },
-  ]
+  const navLinks = t.nav
 
   const closeMenu = () => setIsMobileMenuOpen(false)
 
@@ -57,13 +53,15 @@ function Header() {
                 </li>
               ))}
             </ul>
-            <div className="pl-4 border-l border-slate-200 dark:border-slate-800">
+            <div className="flex items-center gap-3 pl-4 border-l border-slate-200 dark:border-slate-800">
+              <LanguageSwitcher />
               <ThemeToggle />
             </div>
           </nav>
 
           {/* Mobile Actions */}
           <div className="flex items-center gap-2 lg:hidden">
+            <LanguageSwitcher />
             <ThemeToggle />
             <button
               type="button"

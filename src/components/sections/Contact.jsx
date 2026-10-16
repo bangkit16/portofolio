@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { fadeLeft, fadeRight, viewport } from '../../lib/animations'
+import { useLanguage } from '../../context/LanguageContext'
 
 const Contact = () => {
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -41,15 +43,13 @@ const Contact = () => {
             viewport={viewport}
           >
             <span className="font-semibold text-emerald-500 uppercase tracking-wider text-sm mb-2 block">
-              Kontak
+              {t.contact.badge}
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4 tracking-tight">
-              Hubungi Saya
+              {t.contact.title}
             </h2>
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-              Jika Anda memiliki pertanyaan, saran, atau hanya ingin menyapa,
-              jangan ragu untuk menghubungi saya melalui formulir ini. Saya siap
-              membantu Anda.
+              {t.contact.subtitle}
             </p>
 
             <div className="space-y-4">
@@ -158,7 +158,7 @@ const Contact = () => {
                     htmlFor="name"
                     className="block text-sm font-semibold text-slate-800 dark:text-slate-200 mb-2"
                   >
-                    Nama
+                    {t.contact.nameLabel}
                   </label>
                   <input
                     type="text"
@@ -167,7 +167,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 transition"
-                    placeholder="Masukkan nama Anda"
+                    placeholder={t.contact.namePlaceholder}
                     required
                   />
                 </div>
@@ -177,7 +177,7 @@ const Contact = () => {
                     htmlFor="email"
                     className="block text-sm font-semibold text-slate-800 dark:text-slate-200 mb-2"
                   >
-                    Email
+                    {t.contact.emailLabel}
                   </label>
                   <input
                     type="email"
@@ -186,7 +186,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 transition"
-                    placeholder="nama@email.com"
+                    placeholder={t.contact.emailPlaceholder}
                     required
                   />
                 </div>
@@ -196,7 +196,7 @@ const Contact = () => {
                     htmlFor="message"
                     className="block text-sm font-semibold text-slate-800 dark:text-slate-200 mb-2"
                   >
-                    Pesan
+                    {t.contact.messageLabel}
                   </label>
                   <textarea
                     name="message"
@@ -205,7 +205,7 @@ const Contact = () => {
                     onChange={handleChange}
                     rows="4"
                     className="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 transition"
-                    placeholder="Tuliskan pesan Anda di sini..."
+                    placeholder={t.contact.messagePlaceholder}
                     required
                   ></textarea>
                 </div>
@@ -214,7 +214,7 @@ const Contact = () => {
                   type="submit"
                   className="w-full py-3.5 px-6 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm shadow-sm hover:shadow transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                 >
-                  Send Message (Kirim via WhatsApp)
+                  {t.contact.submitBtn}
                 </button>
               </form>
             </div>

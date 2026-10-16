@@ -1,5 +1,8 @@
 /* eslint-disable react/prop-types */
+import { useLanguage } from '../../context/LanguageContext'
+
 function ProjectCard({ nama, gambar, tool, deskripsi, link }) {
+  const { t } = useLanguage()
   const toolsArray = tool ? tool.split(',').map((t) => t.trim()) : []
 
   return (
@@ -9,7 +12,7 @@ function ProjectCard({ nama, gambar, tool, deskripsi, link }) {
         <div className="w-full h-48 sm:h-52 overflow-hidden bg-slate-100 dark:bg-slate-900 relative">
           <img
             src={gambar}
-            alt={`Pratinjau proyek ${nama}`}
+            alt={`${t.project.previewAlt} ${nama}`}
             className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
             loading="lazy"
           />
@@ -43,9 +46,9 @@ function ProjectCard({ nama, gambar, tool, deskripsi, link }) {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
-              aria-label={`Kunjungi proyek ${nama}`}
+              aria-label={`${t.project.viewProject} ${nama}`}
             >
-              <span>Lihat Proyek</span>
+              <span>{t.project.viewProject}</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

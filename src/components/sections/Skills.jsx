@@ -1,8 +1,11 @@
 import SkillItem from '../ui/SkillItem'
 import { motion } from 'framer-motion'
 import { fadeUp, container, viewport } from '../../lib/animations'
+import { useLanguage } from '../../context/LanguageContext'
 
 function Skills() {
+  const { t } = useLanguage()
+
   const skillsData = {
     frontend: [
       { name: 'HTML', level: 'Advanced', icon: '/svg/skills/html.svg', color: '#EF4223' },
@@ -31,10 +34,10 @@ function Skills() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
-            Keahlian Teknis
+            {t.skills.title}
           </h2>
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400">
-            Kombinasi teknologi yang biasa saya gunakan untuk membangun aplikasi web performan dan handal.
+            {t.skills.subtitle}
           </p>
         </div>
 
@@ -51,7 +54,7 @@ function Skills() {
             className="bg-white dark:bg-slate-800/80 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm"
           >
             <h3 className="text-lg font-bold text-center mb-6 pb-3 border-b border-slate-100 dark:border-slate-700 text-slate-900 dark:text-white">
-              Frontend Development
+              {t.skills.frontend}
             </h3>
             <div className="flex flex-wrap justify-center gap-2">
               {skillsData.frontend.map((skill, index) => (
@@ -66,7 +69,7 @@ function Skills() {
             className="bg-white dark:bg-slate-800/80 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm"
           >
             <h3 className="text-lg font-bold text-center mb-6 pb-3 border-b border-slate-100 dark:border-slate-700 text-slate-900 dark:text-white">
-              Backend Development
+              {t.skills.backend}
             </h3>
             <div className="flex flex-wrap justify-center gap-2">
               {skillsData.backend.map((skill, index) => (
@@ -81,7 +84,7 @@ function Skills() {
             className="bg-white dark:bg-slate-800/80 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm"
           >
             <h3 className="text-lg font-bold text-center mb-6 pb-3 border-b border-slate-100 dark:border-slate-700 text-slate-900 dark:text-white">
-              Database & Storage
+              {t.skills.database}
             </h3>
             <div className="flex flex-wrap justify-center gap-2">
               {skillsData.database.map((skill, index) => (

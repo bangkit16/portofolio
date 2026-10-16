@@ -2,8 +2,11 @@ import portoIMG from "/img/portoimg.png";
 import TypingEffect from "react-typing-effect";
 import { motion } from "framer-motion";
 import { fadeLeft, fadeRight } from "../../lib/animations";
+import { useLanguage } from "../../context/LanguageContext";
 
 function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section id="hero" className="overflow-hidden">
       <div className="container mx-auto px-4 mb-16">
@@ -16,29 +19,24 @@ function Hero() {
             animate="visible"
           >
             <span className="font-bold text-emerald-500 text-base lg:text-2xl">
-              Halo semua, Saya
+              {t.hero.greeting}
             </span>
             <h1 className="text-4xl lg:text-5xl mb-2 font-bold text-slate-900 dark:text-white">
-              Bangkit Maulana Caniago
+              {t.hero.name}
             </h1>
             <TypingEffect
+              key={t.hero.roles.join(',')}
               className="lg:text-3xl text-2xl font-bold mb-1 text-slate-900 dark:text-slate-100"
-              text={[
-                "Fullstack Engineer",
-                "Web Developer",
-                "Backend Engineer",
-                "Frontend Engineer",
-              ]}
+              text={t.hero.roles}
               speed={100}
               eraseSpeed={50}
               eraseDelay={1000}
               typingDelay={500}
             />
             <p className="text-base lg:text-xl mt-5 text-slate-600 dark:text-slate-300">
-              Berpengalaman dalam pengembangan aplikasi khususnya di bidang
-              Pengembangan Website sebagai{" "}
+              {t.hero.descPrefix}
               <span className="font-bold text-slate-900 dark:text-white">
-                Fullstack Developer
+                {t.hero.descRole}
               </span>
             </p>
             <div className="mt-8">
@@ -46,7 +44,7 @@ function Hero() {
                 href="#contact"
                 className="rounded-xl lg:text-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2.5 px-6 text-base transition-colors inline-block shadow-sm"
               >
-                Contact Me
+                {t.hero.cta}
               </a>
             </div>
           </motion.div>

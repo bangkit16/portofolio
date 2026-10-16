@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { ThemeProvider } from './context/ThemeContext'
+import { LanguageProvider } from './context/LanguageContext'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import Hero from './components/sections/Hero'
@@ -32,20 +33,22 @@ function App() {
 
   return (
     <ThemeProvider>
-      <AnimatePresence>{isLoading && <Loader />}</AnimatePresence>
-      <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50">
-        <Header />
-        <main className="flex-grow">
-          <Hero />
-          <About />
-          <Experience />
-          <Education />
-          <Skills />
-          <Project />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
+      <LanguageProvider>
+        <AnimatePresence>{isLoading && <Loader />}</AnimatePresence>
+        <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50">
+          <Header />
+          <main className="flex-grow">
+            <Hero />
+            <About />
+            <Experience />
+            <Education />
+            <Skills />
+            <Project />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
+      </LanguageProvider>
     </ThemeProvider>
   )
 }
